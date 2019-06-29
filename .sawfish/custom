@@ -1,0 +1,15 @@
+;; Sawfish user customization -- do not edit by hand!
+;; Use the configurator instead.
+;; sawfish version 1.12.90, written Sat Jun 29 18:47:47 2019
+
+(custom-set-typed-variable (quote workspace-names) (quote ("Main" "Utility")) (quote (list string "Workspace names")))
+(custom-set-typed-variable (quote default-frame-style) (quote arc-theme) (quote frame-style))
+(custom-set-keymap (quote menu-button-keymap) (quote (keymap (popup-window-ops-menu . "Button1-Click") (delete-window . "Button3-Off"))))
+(custom-set-keymap (quote window-keymap) (quote (keymap (tab-raise-right-window . "H-ISO_Left_Tab") (popup-window-ops-menu . "M-m") (tab-raise-left-window . "W-ISO_Left_Tab") (raise-and-pass-through-click . "Button1-Click") (move-window-interactively . "W-Button1-Move") (popup-window-ops-menu . "W-Button2-Click") (raise-lower-window . "W-Button3-Click") (lower-window . "W-Down") (raise-window . "W-Up"))))
+(custom-set-keymap (quote global-keymap) (quote (keymap (cabinet-switch . "C-TAB") ((run-shell-command "rofi -combi-modi window,drun -show combi") . "Super-F2") (cycle-windows . "meta-TAB") (next-workspace . "W-Right") (previous-workspace . "W-Left"))))
+(custom-set-typed-variable (quote wm-modifier-value) (quote (super)) (quote modifier-list))
+(custom-set-typed-variable (quote arc-c:theme-variant) (quote Dark) (quote (choice Arc Dark)))
+(custom-set-typed-variable (quote default-window-animator) (quote none) (quote (choice none solid wireframe cross elliptical draft)))
+(custom-set-typed-variable (quote reload-themes-when-changed) (quote t) (quote boolean))
+(custom-set-typed-variable (quote xterm-program) (quote "xfce4-terminal") (quote string))
+(custom-set-typed-variable (quote browser-program) (quote "vivaldi") (quote string))

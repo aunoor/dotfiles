@@ -1,0 +1,3 @@
+(set-number-of-workspaces 2)
+(custom-set-typed-variable (quote xterm-program) (quote "xfce4-terminal") (quote string))
+(custom-set-typed-variable (quote browser-program) (quote "vivaldi") (quote string))
