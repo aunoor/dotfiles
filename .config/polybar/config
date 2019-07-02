@@ -20,11 +20,8 @@ margin-bottom = 0
 ;----------------------------------------------;
 
 ;;Bars settings
-
-;Notebook
-[bar/thinkpad]
+[section/base]
 enable-ipc = true
-monitor = ${env:MONITOR:LVDS1}
 width = 100%
 height = 24
 
@@ -53,17 +50,15 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = dina:pixelsize=9;1
+;font-0 = Roboto Condensed:pixelsize=9;1
+font-0 = Luxi Sans:pixelsize=9;1
 font-1 = Wuncon Siji:pixelsize=10;1
 font-2 = unifont:size=6;1
-
-modules-left = power-menu ewmh
-;modules-center = mpd
-modules-right = xkeyboard xbacklight alsa  wifi battery cpu date
+font-3 = Material Design Icons:size=10:1
 
 tray-position = right
 tray-padding = 4
-tray-maxsize = 16
+;tray-maxsize = 16
 
 ;click-left =
 ;click-middle =
@@ -77,10 +72,33 @@ tray-maxsize = 16
 
 ;----------------------------------------------;
 
+;Notebook
+[bar/thinkpad]
+inherit = section/base
+monitor = ${env:MONITOR:LVDS1}
+
+modules-left = power-menu ewmh
+;modules-center = mpd
+modules-right = xkeyboard xbacklight alsa wifi battery cpu date
+
+
+;----------------------------------------------;
+
+;Enterprise setup
+[bar/work]
+inherit = section/base
+monitor = ${env:MONITOR:DVI-D-0}
+
+modules-left = power-menu ewmh
+;modules-center = mpd
+modules-right = xkeyboard pulse-work eth0 cpu date
+
+;----------------------------------------------;
+
 [module/cpu]
 type = internal/cpu
 interval = 2
-label = %percentage%%
+label = %percentage:3%%
 format-prefix = " "
 format-prefix-foreground = #fff
 
@@ -141,6 +159,9 @@ label-maxlen = 75
 [module/wifi]
 include-file = ~/.config/polybar/wifi.conf
 
+[module/eth0]
+include-file = ~/.config/polybar/eth0.conf
+
 [module/wired]
 include-file = ~/.config/polybar/eth0.conf
 
@@ -152,6 +173,9 @@ include-file = ~/.config/polybar/alsa.conf
 
 [module/pulse-thinkpad]
 include-file = ~/.config/polybar/pulse-thinkpad.conf
+
+[module/pulse-work]
+include-file = ~/.config/polybar/pulse-work.conf
 
 [module/battery]
 include-file = ~/.config/polybar/battery.conf
