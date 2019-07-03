@@ -2,8 +2,4 @@
 ;(custom-set-typed-variable (quote xterm-program) (quote "xfce4-terminal") (quote string))
 ;(custom-set-typed-variable (quote browser-program) (quote "vivaldi") (quote string))
 
-(define (startup_hook)
-  (system "~/.sawfish/startup.sh")
-)
-
 (add-hook 'after-initialization-hook (lambda() (system "~/.sawfish/startup.sh")))
