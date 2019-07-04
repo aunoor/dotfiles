@@ -95,6 +95,16 @@ modules-right = xkeyboard pulse-work eth0 cpu date
 
 ;----------------------------------------------;
 
+;Home setup
+[bar/home]
+inherit = section/base
+monitor = ${env:MONITOR:DVI-D-0}
+
+modules-left = power-menu ewmh
+;modules-center = mpd
+modules-right = xkeyboard pulse-home eth0 cpu date
+;----------------------------------------------;
+
 [module/cpu]
 type = internal/cpu
 interval = 2
@@ -110,7 +120,6 @@ interval = 2
 label = %percentage_used%%
 format-prefix = " "
 format-prefix-foreground = #fff
-
 
 ;----------------------------------------------;
 
@@ -176,6 +185,9 @@ include-file = ~/.config/polybar/pulse-thinkpad.conf
 
 [module/pulse-work]
 include-file = ~/.config/polybar/pulse-work.conf
+
+[module/pulse-home]
+include-file = ~/.config/polybar/pulse-home.conf
 
 [module/battery]
 include-file = ~/.config/polybar/battery.conf
