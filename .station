@@ -2,3 +2,5 @@
 #STATION=thinkpad
 #For bloody enterprise station
 #STATION=work
+#For home station
+#STATION=home
