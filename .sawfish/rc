@@ -3,3 +3,4 @@
 ;(custom-set-typed-variable (quote browser-program) (quote "vivaldi") (quote string))
 
 (add-hook 'after-initialization-hook (lambda() (system "~/.sawfish/startup.sh")))
+(add-hook 'before-exit-hook (lambda() (system "~/.sawfish/logoff.sh")))
