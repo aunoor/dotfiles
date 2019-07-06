@@ -1,6 +1,7 @@
 #!/bin/sh
 
 /usr/lib/polkit-gnome-authentication-agent-1 &
+/usr/bin/mate-power-manager &
 
 ~/.fehbg &
 
@@ -21,7 +22,7 @@ case $STATION in
 	;;
     "home")
 	/usr/bin/xcompmgr -C -n &
-	~/bin/polybar home &
+	/usr/bin/polybar home &
 	~/bin/Telegram &
 	sleep 1
 	~/bin/polybar-msg cmd restart
