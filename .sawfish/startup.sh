@@ -1,7 +1,6 @@
 #!/bin/sh
 
 /usr/lib/polkit-gnome-authentication-agent-1 &
-/usr/bin/mate-power-manager &
 
 ~/.fehbg &
 
@@ -27,5 +26,6 @@ case $STATION in
 	sleep 1
 	~/bin/polybar-msg cmd restart
 	/usr/bin/conky -b
+	/usr/bin/xset dpms 600 1200 1800
 	;;
 esac

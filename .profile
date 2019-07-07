@@ -28,4 +28,5 @@ test -z "$PROFILEREAD" && . /etc/profile || true
 #fi
 
 export QT_QPA_PLATFORMTHEME=gtk2
-export DESKTOP_SESSION=gnome
+export DESKTOP_SESSION=xfce
+
