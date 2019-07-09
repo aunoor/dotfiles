@@ -125,11 +125,10 @@ format-prefix-foreground = #fff
 
 [module/date]
 type = internal/date
-label = %{F#fff}%{F-} %date%  %{F#e60053}%{F-} %time%
+label = %{F#fff}%{F-} %{A1:galendae:}%date%%{A}   %{F#e60053}%{F-} %time%
 date = %Y-%m-%d
 time = %H:%M
 interval = 5
-
 ;----------------------------------------------;
 
 [module/xbacklight]
